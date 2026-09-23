@@ -169,7 +169,7 @@ Cursor 係咩？佢同 ChatGPT 有咩分別？
 <!-- ═══════════════ 堂 2 ═══════════════ -->
 <section data-lesson="2">
   <h2>堂 2 · 你個平台出世</h2>
-  <div class="goal"><b>今日目標</b>：骨架已經幫你做好（首頁、側欄、科目頁、內容頁）。你要做嘅係令佢變成<b>你嘅</b> —— 改【資料區】，再加一個新功能。</div>
+  <div class="goal"><b>今日目標</b>：骨架已經幫你做好 —— 首頁、側欄、科目頁、內容頁，仲有<b>新聞區、測驗區、小測區</b>。你要做嘅係令佢變成<b>你嘅</b>：改【資料區】，再加一個功能。</div>
 
   <div class="why">
     <h3>先明白</h3>
@@ -334,49 +334,105 @@ tagline 改做「<一句話介紹>」。
 
 <!-- ═══════════════ 堂 4 ═══════════════ -->
 <section data-lesson="4">
-  <h2>堂 4 · 加你自己揀嘅功能</h2>
-  <div class="goal"><b>今日目標</b>：加一個<b>你自己揀</b>嘅功能，而且用得，而且原本嘅嘢冇壞。</div>
+  <h2>堂 4 · 填滿三個新區</h2>
+  <div class="goal"><b>今日目標</b>：骨架已經有<b>新聞區、測驗區、小測區</b>。你要做嘅係<b>填內容</b>，再<b>改一個功能</b>。</div>
 
   <div class="why">
     <h3>先明白</h3>
-    到而家為止你都係照住做。今日開始<b>你話事</b>。
-    一個好嘅平台，係由「用家覺得煩」嘅地方改出嚟 —— 而你自己就係用家。
+    測驗題目係咁樣存嘅：<code>{ q:"問題", options:["A","B","C"], answer:0 }</code>
+    —— <b><code>answer</code> 由 0 開始數</b>。第一個選項係 0，唔係 1。
+    好似<b>樓層</b>：地面係 0 樓。
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">1</span><h4>叫 AI 畀建議，你揀一個</h4></div>
-    <p class="do">複製 → 貼 → 睇 5 個建議 → <b>揀一個</b>（唔好揀「難」）</p>
-    <pre class="prompt" id="p4-1">我個學習平台而家有：首頁、3 個科目、一個科目頁。
+    <div class="step-head"><span class="num">1</span><h4>先問，唔好做</h4></div>
+    <p class="do">複製 → 貼 → 睇佢答。呢條幫你避開最常撞嘅錯。</p>
+    <pre class="prompt" id="p4-1">我個平台有一個測驗區，題目係咁樣存嘅：
 
-畀我 5 個「中學生會覺得有用」嘅功能建議。
-每個寫：功能名、解決咩問題、難度（易／中／難）。
-只做得到「一個 HTML 檔內」嘅嘢。</pre>
+{ q:"問題", options:["A","B","C"], answer:0, explain:"解釋" }
+
+用 3 句話我知：answer:0 係咩意思？
+如果我加一題，有咩位容易打錯？</pre>
     <button class="copy" data-target="p4-1">複製</button>
-    <p class="expect"><b>你會見到</b>：5 個建議，每個有難度。揀一個「易」嘅。</p>
+    <p class="expect"><b>你會見到</b>：AI 提醒你「由 0 開始數」同其他易錯位。</p>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">2</span><h4>做佢</h4></div>
-    <p class="do">複製 → 貼 → 撳 ▶ → 試到用得為止</p>
-    <pre class="prompt" id="p4-2">加一個 <你揀嘅功能>。
+    <div class="step-head"><span class="num">2</span><h4>加一則新聞</h4></div>
+    <p class="do">複製 → 填你嘅內容 → 跑一次 → 撳入新聞區睇下</p>
+    <pre class="prompt" id="p4-2">喺【資料區】嘅 news 入面加一則新聞：
 
-<具體描述你想要咩>
+日期：<今日日期>
+標題：<你嘅標題>
+內容：<兩三句>
 
-只加呢樣，其他唔好郁。
-做完話我知你改咗邊幾行。</pre>
+只改【資料區】。加完話我知我喺邊度見到佢。</pre>
     <button class="copy" data-target="p4-2">複製</button>
-    <div class="trap"><b>加之前</b>：先跑一次原有嘅嘢，確認原本冇壞。唔係壞咗你都唔知係新定舊。</div>
+    <p class="expect"><b>你會見到</b>：新聞區多咗一則，撳得入去睇詳細。</p>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">3</span><h4>出事用呢句 ⭐</h4></div>
-    <p class="do">壞咗、或者怪怪地？唔好即刻叫佢改 —— <b>叫佢先諗</b></p>
-    <pre class="prompt" id="p4-3">我撳咗 <X>，出咗 <Y>，但我想要 <Z>。
+    <div class="step-head"><span class="num">3</span><h4>加一份測驗</h4></div>
+    <p class="do">複製 → 一次過填齊 3 題 → 跑一次 → <b>試下做完整份，睇下分數對唔對</b></p>
+    <pre class="prompt" id="p4-3">喺【資料區】嘅 quizzes 入面加一份新測驗：
 
-先唔好改 code。先用 3 句講你估係咩原因，同埋你點知。
-我確認之後你才改。</pre>
+科目：<科目名>
+標題：<你嘅測驗名>
+題目：
+1. <問題> 選項：<A> / <B> / <C>，正確答案係 <第幾個>，解釋：<一句>
+2. <問題> 選項：<A> / <B> / <C>，正確答案係 <第幾個>，解釋：<一句>
+3. <問題> 選項：<A> / <B> / <C>，正確答案係 <第幾個>，解釋：<一句>
+
+只改【資料區】。做完話我知每一題嘅 answer 你填咗幾多。</pre>
     <button class="copy" data-target="p4-3">複製</button>
-    <p class="expect"><b>點解要咁</b>：咁你就會知佢係唔係亂估。呢句係全個課程最重要嘅一句。</p>
+    <p class="expect"><b>你會見到</b>：測驗區多咗一份。做完成份撳交卷，會計分同逐題話你知對錯。</p>
+    <div class="trap"><b>一定要自己做完一次</b>。如果分數計錯，就係 <code>answer</code> 填錯 —— 呢個就係驗收。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">4</span><h4>加幾題小測</h4></div>
+    <p class="do">複製 → 填 3 題 → 跑一次 → 玩一次睇即時對錯</p>
+    <pre class="prompt" id="p4-4">喺【資料區】嘅 quick 入面加 3 題快問快答：
+
+1. <問題> 選項：<A> / <B> / <C>，正確答案 <第幾個>，解釋：<一句>
+2. <問題> 選項：<A> / <B> / <C>，正確答案 <第幾個>，解釋：<一句>
+3. <問題> 選項：<A> / <B> / <C>，正確答案 <第幾個>，解釋：<一句>
+
+只改【資料區】。</pre>
+    <button class="copy" data-target="p4-4">複製</button>
+    <p class="expect"><b>你會見到</b>：小測區多咗 3 題，撳一個選項即時知對錯，仲有解釋。</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h4>改一個功能（自己話事）</h4></div>
+    <p class="do">呢次冇 prompt 畀你抄 —— <b>你自己寫</b>。填中間嗰句要夠具體。</p>
+    <pre class="prompt" id="p4-5">我想改 <邊個區／邊個位>：<由點樣> 變成 <點樣>。
+
+<用你自己嘅話描述你想要咩>
+
+只改呢部分，其他唔好郁。
+做完話我知你改咗邊幾行。</pre>
+    <button class="copy" data-target="p4-5">複製</button>
+    <p class="expect"><b>你會見到</b>：你要求嘅改動出現，而原本嘅嘢冇壞。</p>
+    <div class="trap"><b>冇靈感？試下呢幾個（易）</b>：測驗加限時、小測隨機出題、答對出 🎉、新聞置頂最新一則。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">6</span><h4>進階：加一個全新區</h4></div>
+    <p class="do">做完晒、仲有時間才做。呢次<b>先叫 AI 講方案，你同意咗才動手</b>。</p>
+    <pre class="prompt" id="p4-6">我想加一個全新嘅區叫「<區名>」（例：影片區、成績區、相片區）。
+
+入面要有：
+1. <功能一>
+2. <功能二>
+
+參照而家「新聞區」嘅做法：側欄加一個掣、一個列表頁、一個詳細頁。
+【資料區】加一個新嘅資料陣列。
+
+先唔好改 code。用 5 句話講你打算改邊幾部分。</pre>
+    <button class="copy" data-target="p4-6">複製</button>
+    <p class="expect"><b>你會見到</b>：AI 講方案，唔係即刻亂改。你睇完覺得 OK 就叫佢做。</p>
+    <div class="trap"><b>呢條最似真做嘢</b>：真實工作就係「先睇方案 → 同意 → 才動手」。</div>
   </div>
 </section>
 
