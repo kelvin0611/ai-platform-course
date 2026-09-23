@@ -98,6 +98,82 @@
 
 <main>
 
+<!-- ═══════════════ 熱身 ═══════════════ -->
+<section data-lesson="P">
+  <h2>🔥 熱身 · 上第一堂之前</h2>
+  <div class="goal"><b>今日目標</b>：喺自己部電腦睇到一個網頁 —— 就係咁簡單。</div>
+
+  <div class="why">
+    <h3>先明白</h3>
+    寫咗一個檔，唔撳「跑」，係唔會知啱唔啱嘅。
+    好似<b>煮完嘢一定要試味</b> —— 唔試，你點知落少咗鹽？
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">1</span><h4>開一個資料夾</h4></div>
+    <p class="do">
+      喺桌面開一個資料夾，改名做 <b>my-platform</b>（唔好用中文名、唔好有空格）。
+      之後所有嘢都放喺呢個資料夾入面。
+    </p>
+    <p class="expect"><b>為咩要咁</b>：檔名同路徑乾淨，之後出事機會少好多。</p>
+    <div class="trap"><b>大忌</b>：檔名用中文、空格、或者放喺「下載」度。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">2</span><h4>用 Cursor 開個資料夾</h4></div>
+    <p class="do">
+      Cursor → <b>File</b> → <b>Open Folder</b> → 揀啱啱嗰個 <b>my-platform</b>
+    </p>
+    <p class="expect"><b>你會見到</b>：左邊出現你個資料夾名，入面係空嘅。之後所有新檔都會喺呢度。</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">3</span><h4>睇到自己個網頁（三個方法，由易到難）</h4></div>
+    <p class="do">
+      <b>A · 最簡單</b>：雙擊 <b>index.html</b> → 用 Chrome 開<br>
+      <b>B · 喺 Cursor 度開</b>：右擊個檔 → Open with… 或者用 Cursor 內建預覽<br>
+      <b>C · 真 server</b>：<code>python -m http.server 8000</code> → Chrome 打 <code>http://localhost:8000</code>
+    </p>
+    <pre class="prompt" id="pP-1">我係用 Windows，啱啱裝好 Cursor。
+我寫好咗一個 index.html，想睇下佢係點樣。
+
+用最簡單嘅方法，一步一步教我點樣喺 Chrome 睇到佢。
+每一步都寫：撳咩、打咩、會見到咩。
+如果唔需要開 server 就咁開得，話我知。</pre>
+    <button class="copy" data-target="pP-1">複製</button>
+    <p class="expect"><b>你會見到</b>：Chrome 開到你寫嘅頁面。</p>
+    <div class="trap"><b>唔好一開始就搞 server</b>。開得到先講 —— A 唔得，才試 B，再唔得才 C。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">4</span><h4>要真 server 嘅時候（Windows）</h4></div>
+    <p class="do">當你有幾個檔（index.html ＋ lab.html），或者 A／B 都出問題，就用呢條</p>
+    <pre class="prompt" id="pP-2">我想喺 Windows 開一個本機預覽伺服器（local server），
+咁我就可以用 http://localhost:8000 睇我自己嘅網頁。
+
+一步一步教我：
+1. 要打咩指令、喺 Cursor 邊個位打
+2. 打完會見到咩
+3. 之後點樣喺 Chrome 開
+4. 用完點樣閂
+
+我部電腦未必裝咗 Python。如果冇，話我知最簡單嘅替代方法。</pre>
+    <button class="copy" data-target="pP-2">複製</button>
+    <p class="expect"><b>你會見到</b>：一步步嘅指示。跟住做，Chrome 打 localhost 就見到你自己個網頁。</p>
+    <div class="trap"><b>開唔到？</b>去 Prompt 表格撳右上角「🆘 有問題？」→ 有條專門講 Windows server。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h4>明白發生咩事</h4></div>
+    <p class="do">唔明就問 —— 唔好死記步驟</p>
+    <pre class="prompt" id="pP-3">用 3 句話我知：
+「開 local server」同「直接雙擊個 HTML 檔」有咩分別？
+用一個生活比喻。唔好講技術名詞。</pre>
+    <button class="copy" data-target="pP-3">複製</button>
+    <p class="expect"><b>你會見到</b>：一個比喻，你會明點解有時要 server、有時唔需要。</p>
+  </div>
+</section>
+
 <!-- ═══════════════ 堂 1 ═══════════════ -->
 <section data-lesson="1">
   <h2>堂 1 · 出第一件作品</h2>
@@ -537,8 +613,8 @@ tagline 改做「<一句話介紹>」。
   var tabs = document.getElementById('tabs');
   var secs = Array.prototype.slice.call(document.querySelectorAll('section'));
 
-  var LABELS = {'1':'堂 1','2':'堂 2','3':'堂 3','4':'堂 4','5':'堂 5','0':'🆘 救命'};
-  var ORDER  = ['1','2','3','4','5','0'];
+  var LABELS = {'P':'🔥 熱身','1':'堂 1','2':'堂 2','3':'堂 3','4':'堂 4','5':'堂 5','0':'🆘 救命'};
+  var ORDER  = ['P','1','2','3','4','5','0'];
 
   ORDER.forEach(function(k){
     var s = secs.filter(function(x){ return x.dataset.lesson === k; })[0];
@@ -561,7 +637,7 @@ tagline 改做「<一句話介紹>」。
   // 記住上一堂（關咗再開返去同一版）
   var saved = null;
   try { saved = localStorage.getItem('lesson'); } catch(e){}
-  show(ORDER.indexOf(saved) >= 0 ? saved : '1');
+  show(ORDER.indexOf(saved) >= 0 ? saved : 'P');
 
   // 複製掣
   Array.prototype.forEach.call(document.querySelectorAll('.copy'), function(btn){
