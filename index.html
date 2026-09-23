@@ -168,106 +168,167 @@ Cursor 係咩？佢同 ChatGPT 有咩分別？
 
 <!-- ═══════════════ 堂 2 ═══════════════ -->
 <section data-lesson="2">
-  <h2>堂 2 · 起自己個平台</h2>
-  <div class="goal"><b>今日目標</b>：一個有你自己平台名嘅首頁，3 個科目，撳得。</div>
+  <h2>堂 2 · 你個平台出世</h2>
+  <div class="goal"><b>今日目標</b>：骨架已經幫你做好（首頁、側欄、科目頁、內容頁）。你要做嘅係令佢變成<b>你嘅</b> —— 改【資料區】，再加一個新功能。</div>
 
   <div class="why">
     <h3>先明白</h3>
-    一個平台有幾層，<b>好似一個書架</b>：最上層係首頁，下面每格係一個科目。
-    你唔會將所有書掉喺地下 —— 分開先搵得到。
+    個檔分咗兩邊：<b>【資料區】</b>係你嘅內容，<b>【引擎區】</b>係令佢行得嘅嘢。
+    好似<b>一本書</b>：你可以換晒裡面嘅字，書本身唔會散。
+    <br>所以改資料，係唔會搞壞個平台嘅。
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">1</span><h4>計劃你個平台</h4></div>
-    <p class="do">先喺紙上面寫低：平台叫咩名？畀邊個用？放 3 類咩內容？</p>
-    <pre class="prompt" id="p2-1">我個平台叫「<你嘅平台名>」，係畀中學生用嘅。
-我打算放呢幾類內容：筆記、虛擬實驗、<自訂>。
+    <div class="step-head"><span class="num">1</span><h4>攞起手檔，跑一次</h4></div>
+    <p class="do">
+      導師會派你兩個檔：<b>index.html</b> 同 <b>lab.html</b> →
+      <b>兩個放埋同一個資料夾</b> → 用 Cursor 打開嗰個資料夾 → 撳 <b>▶</b> 跑一次
+    </p>
+    <p class="do" style="font-size:14px;color:#64748b">
+      漏咗？可以喺
+      <a href="https://kelvin0611.github.io/ai-platform-prompts/template/" target="_blank">呢度</a>
+      再攞（右鍵 → 另存新檔）
+    </p>
+    <p class="expect"><b>你會見到</b>：頂部橫梁 ＋ 左邊側欄 ＋ 3 個科目卡，撳得入去、返得返出嚟。<b>你唔需要由零開始。</b></p>
+  </div>
 
-先唔好寫 code。用 3 句話我知首頁應該展示咩先最有用。</pre>
+  <div class="step">
+    <div class="step-head"><span class="num">2</span><h4>先問，唔好做</h4></div>
+    <p class="do">複製 → 貼 → 睇佢答。明白咗才做下一步。</p>
+    <pre class="prompt" id="p2-1">我有一個 index.html，係一個學習平台嘅骨架。
+入面分咗【資料區】同【引擎區】。
+
+用 3 句話我知：點解要分開？
+用一個生活比喻。唔好講 code。</pre>
     <button class="copy" data-target="p2-1">複製</button>
-    <p class="expect"><b>你會見到</b>：AI 建議你首頁點排。你可以唔同意。</p>
+    <p class="expect"><b>你會見到</b>：一個比喻，講「內容」同「機制」嘅分別。</p>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">2</span><h4>做首頁</h4></div>
-    <p class="do">複製 → 貼 → 等 → 撳 ▶ 睇</p>
-    <pre class="prompt" id="p2-2">我想要一個網頁，係我嘅學習平台首頁。
+    <div class="step-head"><span class="num">3</span><h4>改平台名</h4></div>
+    <p class="do">複製 → 貼 → 跑一次 → 睇下邊幾個地方變咗</p>
+    <pre class="prompt" id="p2-2">喺【資料區】入面：
+個平台由「我嘅學習平台」改做「<你嘅平台名>」，
+tagline 改做「<一句話介紹>」。
 
-平台名：<填>
-要有：
-1. 大大嘅平台名喺頂
-2. 一句話介紹（下面細細行）
-3. 下面 3 個「科目卡」，每個有科名同一個 emoji
-4. 每個卡撳落去要有反應（暫時彈一句「即將推出」都得）
-
-設計：乾淨、大字、卡片圓角、電話睇都清楚。
-唔要：唔要登入、唔要後端、唔要廣告。
-只用一個 index.html 檔。
-
-做完用 5 句解釋你加咗咩。</pre>
+只改【資料區】，唔好郁【引擎區】。</pre>
     <button class="copy" data-target="p2-2">複製</button>
-    <p class="expect"><b>你會見到</b>：3 個科目卡。撳落去有反應。</p>
-    <div class="trap"><b>成日漏</b>：唔記得講「撳落去要有反應」→ AI 會出 3 個死嘅字。補一句就得。</div>
+    <p class="expect"><b>你會見到</b>：頂部橫梁、側欄、瀏覽器 tab 嘅名<b>一齊變</b>。</p>
+    <div class="trap"><b>留意呢點</b>：你只改一個位，三個地方跟住變 —— 因為佢哋讀同一份資料。</div>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">3</span><h4>執靚</h4></div>
-    <p class="do">揀一個你最唔滿意嘅位，用同一句「只改呢部分」</p>
-    <pre class="prompt" id="p2-3">而家 <邊個位> 唔好，我希望 <變成點>。
-只改呢部分，其他唔好郁。</pre>
+    <div class="step-head"><span class="num">4</span><h4>換你嘅科目</h4></div>
+    <p class="do">複製 → 填你自己嘅 3 個科目 → 跑一次</p>
+    <pre class="prompt" id="p2-3">喺【資料區】入面，將 3 個科目改成我自己嘅：
+
+1. <科目一> emoji 用 <emoji>，描述：<一句>
+2. <科目二> emoji 用 <emoji>，描述：<一句>
+3. <科目三> emoji 用 <emoji>，描述：<一句>
+
+只改【資料區】。</pre>
     <button class="copy" data-target="p2-3">複製</button>
+    <p class="expect"><b>你會見到</b>：首頁同側欄都變咗你嘅科目。</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h4>換配色</h4></div>
+    <p class="do">叫佢換走主色 —— 令你個平台唔似人哋嗰個</p>
+    <pre class="prompt" id="p2-4">我想換走主色，變成 <你想要嘅色>。
+
+只改最上面 :root 入面嘅色值，其他一律唔好郁。
+換完話我知你改咗邊幾行。如果咁樣會變醜，警告我。</pre>
+    <button class="copy" data-target="p2-4">複製</button>
+    <p class="expect"><b>你會見到</b>：成個平台嘅色一齊變。</p>
+    <div class="trap"><b>呢步學到</b>：改一個值，全部跟住變 —— 呢個叫「設計變數」。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">6</span><h4>今日挑戰：加「最近更新」</h4></div>
+    <p class="do">呢次你自己寫描述。複製 → 填中間嗰句 → 做到用得為止</p>
+    <pre class="prompt" id="p2-5">我想喺首頁加一個「最近更新」區，
+用細細張卡列出最新 3 項內容，撳得入去。
+
+只加呢樣，其他唔好郁。
+做完話我知你改咗邊幾行。</pre>
+    <button class="copy" data-target="p2-5">複製</button>
+    <p class="expect"><b>你會見到</b>：首頁多咗一區。</p>
+    <div class="trap"><b>佢可能會問你</b>：「最新」點定義？ —— 你就係要答嘅人。試下自己諗一個講法。</div>
   </div>
 </section>
 
 <!-- ═══════════════ 堂 3 ═══════════════ -->
 <section data-lesson="3">
-  <h2>堂 3 · 撳得入去 ＋ 放你自己嘅嘢</h2>
-  <div class="goal"><b>今日目標</b>：撳科目卡 → 入到一版，見到你堂 1 造嗰個實驗。</div>
+  <h2>堂 3 · 放你自己嘅內容入去</h2>
+  <div class="goal"><b>今日目標</b>：堂 1 造嘅虛擬實驗、自己寫嘅筆記 —— 全部放入你個平台。</div>
 
   <div class="why">
     <h3>先明白</h3>
-    「撳一個掣，去另一版」叫做<b>導覽</b>。
-    做一個檔定分開幾個檔都得 —— 好似<b>一間大房</b>同一間屋嘅分別。今日我哋全部放同一個檔，因為交得方便。
+    【資料區】入面，每一項內容都有一個 <b>type</b>：<b>note</b>（筆記）同 <b>lab</b>（虛擬實驗）。
+    好似<b>一個櫃有幾種格</b> —— 你話佢係邊種，佢就知點展示。
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">1</span><h4>問有咩做法</h4></div>
-    <p class="do">複製 → 貼 → 睇佢答（唔使明晒，知有兩條路就夠）</p>
-    <pre class="prompt" id="p3-1">我想要「撳一個掣之後入到另一版」。
+    <div class="step-head"><span class="num">1</span><h4>先問，唔好做</h4></div>
+    <p class="do">複製 → 貼 → 睇佢答。明白咗才做下一步。</p>
+    <pre class="prompt" id="p3-1">【資料區】入面每個內容都有 type，有 "note" 同 "lab"。
 
-先唔好寫 code。用 3 句話我知有邊兩種做法，
-各自好處同壞處。用「一間房」同「一間屋」嘅比喻。</pre>
+用 3 句話我知：點解要有 type？
+如果我想加一種新 type，大概要改咩？</pre>
     <button class="copy" data-target="p3-1">複製</button>
+    <p class="expect"><b>你會見到</b>：AI 講「type 決定點展示」。呢個概念之後你自己都用得着。</p>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">2</span><h4>做科目頁</h4></div>
-    <p class="do">複製 → 貼 → 撳 ▶ → 試吓撳入去、再撳返出嚟</p>
-    <pre class="prompt" id="p3-2">我而家想：撳「<科目名>」卡之後，出一個科目頁。
+    <div class="step-head"><span class="num">2</span><h4>加一則筆記</h4></div>
+    <p class="do">複製 → 填你自己嘅標題同內容 → 跑一次 → 去側欄搵下佢</p>
+    <pre class="prompt" id="p3-2">喺「<科目名>」入面加一則筆記：
 
-科目頁要有：
-1. 科目名喺頂，有個「← 返回」掣
-2. 一個列表，列出 2-3 項（例：<你嘅筆記名>、<你嘅實驗名>）
-3. 每一項撳落去有反應
+標題：<你嘅標題>
+內容：<你寫嘅一兩句>
 
-只改呢部分，其他唔好郁。做完解釋你加咗咩。</pre>
+只改【資料區】。加完話我知我喺側欄邊度搵到佢。</pre>
     <button class="copy" data-target="p3-2">複製</button>
-    <p class="expect"><b>你會見到</b>：撳入去有新版，撳「← 返回」返得返出嚟。</p>
+    <p class="expect"><b>你會見到</b>：側欄多咗一項，撳得入去見到你寫嘅嘢。</p>
   </div>
 
   <div class="step">
-    <div class="step-head"><span class="num">3</span><h4>放你自己嘅實驗入去</h4></div>
-    <p class="do">複製 → 貼 → 撳 ▶ → 睇下你自己堂 1 個實驗出唔出到</p>
-    <pre class="prompt" id="p3-3">我有一個之前做好嘅 HTML，係一個虛擬實驗。
-我想喺科目頁撳某一項，下面就直接顯示嗰個實驗。
+    <div class="step-head"><span class="num">3</span><h4>再加一則</h4></div>
+    <p class="do">同樣嘅事做第二次 —— <b>呢次試下唔問 AI 點做</b></p>
+    <pre class="prompt" id="p3-3">再喺同一科加一則筆記：
+標題：<你嘅標題>
+內容：<你寫嘅內容>
 
-用 iframe 做。如果技術上做唔到，話我知，
-同埋建議我另一個做法。
-
-只改呢部分，其他唔好郁。</pre>
+只改【資料區】。</pre>
     <button class="copy" data-target="p3-3">複製</button>
-    <p class="expect"><b>你會見到</b>：撳一項，下面出現你堂 1 造嗰個實驗。</p>
-    <div class="trap"><b>唔緊要</b>：如果 AI 話做唔到，好正常。佢會畀你另一個做法 —— 就用佢嗰個。</div>
+    <div class="trap"><b>愈做愈快</b>：第二次你已經大概知喺邊度加。呢個就係「上手」。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">4</span><h4>放入你嘅虛擬實驗</h4></div>
+    <p class="do">將堂 1 造嗰個檔改名做 <b>lab.html</b>，同 <b>index.html</b> 放同一個資料夾 → 跑一次</p>
+    <pre class="prompt" id="p3-4">我堂 1 造咗一個虛擬實驗，我想放入「<科目名>」。
+
+我已經將佢改名做 lab.html，同 index.html 放喺同一個資料夾。
+【資料區】入面已經有一項 type:"lab"，src 係 "lab.html"。
+
+確認佢真係駁得通。
+如果 iframe 出唔到，話我知係咩原因（用 3 句）。</pre>
+    <button class="copy" data-target="p3-4">複製</button>
+    <p class="expect"><b>你會見到</b>：撳嗰項，下面直接出現你自己堂 1 造嗰個實驗。</p>
+    <div class="trap"><b>睇唔到？</b>確認兩個檔真係同一個資料夾，而且個實驗檔真係叫 <b>lab.html</b>（大細寫要一樣）。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h4>今日挑戰：加「同科其他內容」</h4></div>
+    <p class="do">自己寫描述。複製 → 填中間 → 做到用得為止</p>
+    <pre class="prompt" id="p3-5">內容頁最底加一個「同科其他內容」區，
+列出同一科其他項，撳得入去。
+目前睇緊嗰項唔好列出嚟。
+
+只加呢樣，其他唔好郁。</pre>
+    <button class="copy" data-target="p3-5">複製</button>
+    <p class="expect"><b>你會見到</b>：睇完一則筆記，下面有得跳去同科其他嘢。</p>
   </div>
 </section>
 
@@ -332,7 +393,7 @@ Cursor 係咩？佢同 ChatGPT 有咩分別？
 
   <div class="step">
     <div class="step-head"><span class="num">1</span><h4>交檔畀導師</h4></div>
-    <p class="do">你嘅 <b>index.html</b> 交畀導師（AirDrop／Google Drive／USB 都得）→ 導師幫你放上網 → 派你一條 link 同 QR code</p>
+    <p class="do">你嘅 <b>index.html</b> 同 <b>lab.html</b>（兩個都要交）畀導師（AirDrop／Google Drive／USB 都得）→ 導師幫你放上網 → 派你一條 link 同 QR code</p>
     <p class="expect"><b>你會見到</b>：用電話開條 link，同你電腦見到一樣。</p>
   </div>
 
