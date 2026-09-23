@@ -174,6 +174,121 @@
   </div>
 </section>
 
+<!-- ═══════════════ 儲存 ═══════════════ -->
+<section data-lesson="G">
+  <h2>💾 儲存 · 每堂都要做</h2>
+  <div class="goal"><b>今日目標</b>：你嘅 code 全部放喺自己嘅 GitHub。下一堂坐邊部電腦都攞得返。</div>
+
+  <div class="why">
+    <h3>先明白</h3>
+    你寫嘅嘢而家只喺<b>呢一部電腦</b>。好似你喺一張紙寫低嘢，但係<b>紙冇帶走</b>。
+    放上 GitHub = <b>影印一份鎖喺櫃</b>，你去到邊都攞得返。
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">1</span><h4>第一次：裝 Git ＋ 開 GitHub</h4></div>
+    <p class="do">兩樣都係一次過嘅事。叫 AI 一步步教你。</p>
+    <pre class="prompt" id="pG-1">我係用 Windows，未裝過 Git。
+
+一步一步教我點裝：
+1. 去邊度下載（要撳咩）
+2. 裝嘅時候有咩要改（如果全部預設都得，話我知）
+3. 裝完之後，點確認真係裝好
+
+用中學生明嘅講法，唔好假設我識任何嘢。</pre>
+    <button class="copy" data-target="pG-1">複製</button>
+    <p class="do" style="margin-top:14px">裝完之後，開 GitHub 帳號同一個 repo：</p>
+    <pre class="prompt" id="pG-2">我未有 GitHub 帳號。
+
+一步一步教我：
+1. 點註冊（用邊個 email 好）
+2. 點開一個新 repo
+3. 個 repo 叫咩名好（我個 project 係一個學習平台）
+4. 揀 public 定 private？分別係咩
+5. 開完之後我會見到咩
+
+用中學生明嘅講法。</pre>
+    <button class="copy" data-target="pG-2">複製</button>
+    <p class="expect"><b>你會見到</b>：Git 裝好、你有個 GitHub 帳號、有個空嘅 repo。</p>
+    <div class="trap"><b>呢步只做一次。</b>之後每堂都唔使再做。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">2</span><h4>第一次：叫 AI 幫你上傳</h4></div>
+    <p class="do">複製 → 填你個資料夾路徑同 repo 網址 → 佢會幫你跑指令</p>
+    <pre class="prompt" id="pG-3">我嘅 code 喺呢個資料夾：<資料夾路徑>
+我啱啱開咗一個 GitHub repo：<repo 網址>
+
+請你幫我：
+1. 喺呢個資料夾建立 git
+2. 連接去嗰個 repo
+3. 將所有檔上傳上去
+
+指令你幫我跑（或者一步一步話我知要打咩）。
+跑完話我知成功定失敗，同埋我點自己確認。</pre>
+    <button class="copy" data-target="pG-3">複製</button>
+    <p class="do" style="margin-top:14px">跟住一定要<b>自己驗證</b>：</p>
+    <pre class="prompt" id="pG-4">我頭先叫你幫我上傳咗。
+
+教我點自己確認真係成功（唔係只係你話成功）：
+1. 我可以去邊度睇
+2. 應該見到咩
+3. 如果見到舊嘅版本，代表咩
+
+唔好改任何嘢。</pre>
+    <button class="copy" data-target="pG-4">複製</button>
+    <p class="expect"><b>你會見到</b>：去 GitHub 網站撳你個 repo，見到你啲檔。</p>
+    <div class="trap"><b>AI 話成功 ≠ 成功</b>。自己開一次 GitHub 睇，見到才算。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">3</span><h4>每堂開始：攞返上次嘅 code</h4></div>
+    <p class="do"><b>換咗電腦就一定要做。</b>複製 → 填 repo 網址 → 佢幫你攞返所有檔</p>
+    <pre class="prompt" id="pG-5">我而家喺一部新嘅電腦（或者重裝過）。
+我上次嘅 code 放咗喺 GitHub：<repo 網址>
+
+一步一步教我點樣攞返所有檔落嚟：
+1. 要打咩指令、喺 Cursor 邊個位打
+2. 會存喺邊個資料夾
+3. 攞完之後點樣喺 Cursor 開嚟睇
+
+你幫我跑都得。跑完話我知我應該見到咩。
+
+（如果係同一部電腦，唔使重新 clone，叫 AI 做 git pull 就得。）</pre>
+    <button class="copy" data-target="pG-5">複製</button>
+    <p class="expect"><b>你會見到</b>：上次所有檔返晒嚟，開喺 Cursor 見到。</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">4</span><h4>每堂落堂：儲存 ＋ 上傳</h4></div>
+    <p class="do"><b>落堂前最後一件事 —— 唔做就等於今日白做。</b></p>
+    <pre class="prompt" id="pG-6">我要落堂喇，要將今日做嘅嘢全部存上 GitHub。
+
+請你幫我：
+1. 先列出今日改咗邊幾個檔（我想睇下先）
+2. 幫我寫一句 commit message（英文，一句為限）
+3. 上傳上去
+
+跑完話我知成功定失敗，同埋我點自己確認。</pre>
+    <button class="copy" data-target="pG-6">複製</button>
+    <p class="expect"><b>你會見到</b>：佢列出你改過嘅檔，然後上傳成功。</p>
+    <div class="trap"><b>為咩要「列畀我睇」</b>：你會知自己有冇唔小心改咗啲唔應該改嘅嘢。</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h4>明白發生咩事</h4></div>
+    <p class="do">唔好死背指令 —— 明咗就唔會驚</p>
+    <pre class="prompt" id="pG-7">用 3 句話我知：
+「儲存」同「上傳」有咩分別？commit 同 push 又係咩？
+
+用一個比喻（提示：好似寫日記同寄出去）。
+唔好講指令。</pre>
+    <button class="copy" data-target="pG-7">複製</button>
+    <p class="expect"><b>你會見到</b>：一個比喻。三個名：<code>add</code> 揀檔、<code>commit</code> 打記錄、<code>push</code> 寄出去。</p>
+    <div class="trap"><b>出問題？</b>去 Prompt 表格「💾 儲存」分頁撳右上角「🆘 有問題？」。</div>
+  </div>
+</section>
+
 <!-- ═══════════════ 堂 1 ═══════════════ -->
 <section data-lesson="1">
   <h2>堂 1 · 出第一件作品</h2>
@@ -613,8 +728,8 @@ tagline 改做「<一句話介紹>」。
   var tabs = document.getElementById('tabs');
   var secs = Array.prototype.slice.call(document.querySelectorAll('section'));
 
-  var LABELS = {'P':'🔥 熱身','1':'堂 1','2':'堂 2','3':'堂 3','4':'堂 4','5':'堂 5','0':'🆘 救命'};
-  var ORDER  = ['P','1','2','3','4','5','0'];
+  var LABELS = {'P':'🔥 熱身','G':'💾 儲存','1':'堂 1','2':'堂 2','3':'堂 3','4':'堂 4','5':'堂 5','0':'🆘 救命'};
+  var ORDER  = ['P','G','1','2','3','4','5','0'];
 
   ORDER.forEach(function(k){
     var s = secs.filter(function(x){ return x.dataset.lesson === k; })[0];
